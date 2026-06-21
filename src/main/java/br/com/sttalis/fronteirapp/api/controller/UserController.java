@@ -1,0 +1,32 @@
+package br.com.sttalis.fronteirapp.api.controller;
+
+import br.com.sttalis.fronteirapp.api.dto.UserRequestDTO;
+import br.com.sttalis.fronteirapp.api.dto.UserResponseDTO;
+import br.com.sttalis.fronteirapp.domain.service.UserService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    private final UserService userService;
+
+    public UserController(UserService userService){
+        this.userService = userService;
+    }
+
+    /**
+     * PostMapping mapeia requisicoes POST para rota /api/users
+     * @Valid exige que o Spring execute as anotacoes @NotBlank do DTO
+     * Se os dados forem invalido lanca um erro 400Bad Request
+     */
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED) //Boas praticas: Retorna 201 e nao 200 ao criar
+
+    public UserResponseDTO createUser(@ResquestBody @Valid UserRequestDTO request){
+        return userService.registerUser(request);
+    }
+}
