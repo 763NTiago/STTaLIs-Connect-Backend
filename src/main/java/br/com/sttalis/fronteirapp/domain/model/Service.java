@@ -36,7 +36,7 @@ public class Service {
     @Column(nullable = false)
     private Currency currency;
 
-    @Enumerated(EnumType.STRIG)
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ServiceCategory category;
 
@@ -123,7 +123,7 @@ public class Service {
     public void setCategory(ServiceCategory category) {
         this.category = category;
     }
-    
+
 
     public User getProvider() {
         return provider;
