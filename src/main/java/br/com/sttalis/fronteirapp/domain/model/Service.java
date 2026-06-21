@@ -65,7 +65,7 @@ public class Service {
 
     @PrePersist
     protected void onCreate(){
-        this.createdAT = LocalDateTime.now();
+        this.createdAt = LocalDateTime.now();
     }
 
 
@@ -120,12 +120,12 @@ public class Service {
         this.provider = provider;
     }
 
-    public LocalDateTime getCreatedAT() {
-        return createdAT;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreatedAT(LocalDateTime createdAT) {
-        this.createdAT = createdAT;
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
 }
