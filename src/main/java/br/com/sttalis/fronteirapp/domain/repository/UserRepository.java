@@ -1,6 +1,6 @@
 package br.com.sttalis.fronteirapp.domain.repository;
 
-import br.com.sttalis.frontirapp.domain.model.User;
+import br.com.sttalis.fronteirapp.domain.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 

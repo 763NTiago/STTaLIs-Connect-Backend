@@ -2,7 +2,7 @@ package br.com.sttalis.fronteirapp.api.dto;
 
 import br.com.sttalis.fronteirapp.domain.model.Country;
 import br.com.sttalis.fronteirapp.domain.model.UserRole;
-import jakarta.valitation.constraints.Email;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -13,6 +13,6 @@ public record UserRequestDTO(
         @NotBlank(message = "O nome não pode ser vazio") String name,
         @NotBlank @Email(message = "Formato de e-mail inválido") String email,
         @NotBlank String password,
-        @NotNull UseRole role,
+        @NotNull UserRole role,
         @NotNull Country country
 ){}

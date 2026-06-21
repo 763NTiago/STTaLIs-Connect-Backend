@@ -1,7 +1,7 @@
 package br.com.sttalis.fronteirapp.domain.service;
 
-import br.com.sttalis.fronteirapp.api.dto.RequestDTO;
-import br.com.sttalis.fronteirapp.api.dto.ResponseDTO;
+import br.com.sttalis.fronteirapp.api.dto.UserRequestDTO;
+import br.com.sttalis.fronteirapp.api.dto.UserResponseDTO;
 import br.com.sttalis.fronteirapp.domain.model.User;
 import br.com.sttalis.fronteirapp.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -38,7 +38,7 @@ public class UserService {
         );
 
         //3. Persistenia via JPA
-        User savedUser = userRepository.save(useToSave);
+        User savedUser = userRepository.save(userToSave);
 
         //4. Conversao de Entidade -> DTO seguro pra retorno
         return new UserResponseDTO(

@@ -26,7 +26,7 @@ public class UserController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED) //Boas praticas: Retorna 201 e nao 200 ao criar
 
-    public UserResponseDTO createUser(@ResquestBody @Valid UserRequestDTO request){
+    public UserResponseDTO createUser(@RequestBody @Valid UserRequestDTO request){
         return userService.registerUser(request);
     }
 }
