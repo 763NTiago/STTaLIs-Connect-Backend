@@ -1,6 +1,6 @@
-package br.com.sttalis.fronteiraapp.domain.model;
+package br.com.sttalis.fronteirapp.domain.model;
 
-import jakarta.persitence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -10,7 +10,7 @@ import java.util.UUID;
 public class Service {
 
     @Id
-    @GeneratedValue(strategy = Generationtype.UUID)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(nullable = false, length = 150)
@@ -21,15 +21,15 @@ public class Service {
      * O padrao do VARCHAR e 255 caracteres.
      */
 
-    @Column(nullable = false, colunmDefinition = "TEXT")
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String description;
 
     /**
      * precision = 12: Total de digitos suportados (10 billhoes)
-     * Scale = 2: casas cecimais
+     * scale = 2: casas decimais
      */
 
-    @Column(nullable = false, precision = 12, Scale = 2)
+    @Column(nullable = false, precision = 12, scale = 2)
     private BigDecimal price;
 
     @Enumerated(EnumType.STRING)
@@ -39,15 +39,15 @@ public class Service {
     /**
      * RELACIONAMENTO ENTRE TABELAS
      * @ManyToOne = "Muitos servicos poder pertencer a um usuario"
-     * feth = FetchType.LAZY e critico para performance"
+     * fetch = FetchType.LAZY e critico para performance"
      */
 
-    @ManyToOne(flech = FlachType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "provider_id", nullable = false)
     private User provider;
 
     @Column(name = "created_at", nullable = false, updatable = false)
-    private LocalDateTime createdAT;
+    private LocalDateTime createdAt;
 
     protected Service () {}
 
