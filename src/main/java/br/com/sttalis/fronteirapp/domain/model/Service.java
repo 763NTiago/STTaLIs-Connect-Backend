@@ -36,6 +36,10 @@ public class Service {
     @Column(nullable = false)
     private Currency currency;
 
+    @Enumerated(EnumType.STRIG)
+    @Column(nullable = false)
+    private ServiceCategory category;
+
     /**
      * RELACIONAMENTO ENTRE TABELAS
      * @ManyToOne = "Muitos servicos poder pertencer a um usuario"
@@ -111,6 +115,15 @@ public class Service {
     public void setCurrency(Currency currency) {
         this.currency = currency;
     }
+
+    public ServiceCategory getCategory() {
+        return category;
+    }
+
+    public void setCategory(ServiceCategory category) {
+        this.category = category;
+    }
+    
 
     public User getProvider() {
         return provider;
