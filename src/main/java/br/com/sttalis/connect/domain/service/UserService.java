@@ -1,9 +1,9 @@
 package br.com.sttalis.connect.domain.service;
 
-import br.com.sttalis.fronteirapp.api.dto.UserRequestDTO;
-import br.com.sttalis.fronteirapp.api.dto.UserResponseDTO;
-import br.com.sttalis.fronteirapp.domain.model.User;
-import br.com.sttalis.fronteirapp.domain.repository.UserRepository;
+import br.com.sttalis.connect.api.dto.UserRequestDTO;
+import br.com.sttalis.connect.api.dto.UserResponseDTO;
+import br.com.sttalis.connect.domain.model.User;
+import br.com.sttalis.connect.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
