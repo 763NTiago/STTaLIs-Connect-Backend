@@ -1,8 +1,8 @@
-package br.com.sttalis.fronteirapp.api.controller;
+package br.com.sttalis.connect.api.controller;
 
-import br.com.sttalis.fronteirapp.api.dto.UserRequestDTO;
-import br.com.sttalis.fronteirapp.api.dto.UserResponseDTO;
-import br.com.sttalis.fronteirapp.domain.service.UserService;
+import br.com.sttalis.connect.api.dto.UserRequestDTO;
+import br.com.sttalis.connect.api.dto.UserResponseDTO;
+import br.com.sttalis.connect.domain.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,0 +1,13 @@
+${AnsiColor.CYAN}
+  _____ _______ _______      _      _____  _____
+ / ____|__   __|__   __|    | |    |_   _|/ ____|
+| (___    | |     | |  __ _| |      | | | (___
+ \___ \   | |     | | / _` | |      | |  \___ \
+ ____) |  | |     | || (_| | |____ _| |_ ____) |
+|_____/   |_|     |_| \__,_|______|_____|_____/
+
+${AnsiColor.MAGENTA}
+         T E C H   S O L U T I O N S
+${AnsiColor.DEFAULT}
+ :: FronteirApp Backend ::        (v${spring-boot.version})
+ :: Java ${java.version} ::

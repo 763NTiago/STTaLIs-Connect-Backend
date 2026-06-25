@@ -1,4 +1,4 @@
-package br.com.sttalis.fronteirapp.domain.repository;
+package br.com.sttalis.connect.domain.repository;
 
 import br.com.sttalis.fronteirapp.domain.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

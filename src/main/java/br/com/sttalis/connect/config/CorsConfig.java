@@ -1,4 +1,4 @@
-package br.com.sttalis.fronteirapp.config;
+package br.com.sttalis.connect.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

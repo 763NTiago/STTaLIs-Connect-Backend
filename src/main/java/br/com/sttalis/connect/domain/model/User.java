@@ -1,4 +1,4 @@
-package br.com.sttalis.fronteirapp.domain.model;
+package br.com.sttalis.connect.domain.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

@@ -1,4 +1,4 @@
-package br.com.sttalis.fronteirapp.domain.model;
+package br.com.sttalis.connect.domain.model;
 
 /**
  * representa as moedas transacionadas.

@@ -1,4 +1,4 @@
-package br.com.sttalis.fronteirapp.domain.service;
+package br.com.sttalis.connect.domain.service;
 
 import br.com.sttalis.fronteirapp.api.dto.UserRequestDTO;
 import br.com.sttalis.fronteirapp.api.dto.UserResponseDTO;

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.sttalis</groupId>
-	<artifactId>fronteirapp</artifactId>
+	<artifactId>connect</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<name>STTaLIs Connect</name>
+	<description>Marketplace binacional de servicos - Ponta Pora BR e Pedro Juan Caballero PY</description>
 	<url/>
 	<licenses>
 		<license/>

@@ -1,7 +1,7 @@
-package br.com.sttalis.fronteirapp.api.dto;
+package br.com.sttalis.connect.api.dto;
 
-import br.com.sttalis.fronteirapp.domain.model.Country;
-import br.com.sttalis.fronteirapp.domain.model.UserRole;
+import br.com.sttalis.connect.domain.model.Country;
+import br.com.sttalis.connect.domain.model.UserRole;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

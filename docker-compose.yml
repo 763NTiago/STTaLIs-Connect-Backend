@@ -2,7 +2,7 @@ version: '3.8'
 services:
   db:
     image: postgres:15-alpine
-    container_name: fronteirapp_db
+    container_name: sttalisconnect_db
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
