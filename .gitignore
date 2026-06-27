@@ -34,3 +34,4 @@ build/
 
 .env
 Comandos.md
+application-dev.properties

@@ -6,14 +6,18 @@ import br.com.sttalis.connect.domain.model.User;
 import br.com.sttalis.connect.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service
 public class UserService {
     // Injeção de Dependência pelo Contrutor
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository){
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder){
+
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     /**
@@ -28,11 +32,13 @@ public class UserService {
             throw new RuntimeException("E-mail já está em uso na plataforma.");
         }
 
+        String encryptedPassword = passwordEncoder.encode(request.password());
+
         // 2. Conversao DTO -> Entidade
         User userToSave = new User(
                 request.name(),
                 request.email(),
-                request.password(), //Na Fase de Segurity aplicaremos PasswordEncoder
+                encryptedPassword,
                 request.role(),
                 request.country()
         );
