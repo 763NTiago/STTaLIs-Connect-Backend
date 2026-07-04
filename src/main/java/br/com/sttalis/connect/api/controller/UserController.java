@@ -8,12 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("" +
-        "" +
-        "" +
-        "" +
-        "" +
-        "")
+@RequestMapping("/api/users")
 public class UserController {
 
     private final UserService userService;
@@ -29,6 +24,7 @@ public class UserController {
      */
 
     @PostMapping
+
     @ResponseStatus(HttpStatus.CREATED) //Boas praticas: Retorna 201 e nao 200 ao criar
 
     public UserResponseDTO createUser(@RequestBody @Valid UserRequestDTO request){
